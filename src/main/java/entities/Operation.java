@@ -13,7 +13,9 @@ import java.math.BigDecimal;
 @Builder
 @ToString
 public class Operation {
+    private String operator;
     private String DateTime;
     private OperationType operationType;
     private BigDecimal value;
+    private Account account;
 }
