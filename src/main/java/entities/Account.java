@@ -23,6 +23,7 @@ public class Account {
     private double balance;
     private List<Operation> bankStatement;
 
+
     public void runOperation(RawOperation operation){
         if (Objects.equals(operation.getOperationType(), "SAQUE")){
             this.balance = this.balance - Double.parseDouble(operation.getValue());
