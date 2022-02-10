@@ -1,12 +1,11 @@
 package entities;
 
-import Enums.OperationType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.math.BigDecimal;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -14,8 +13,8 @@ import java.math.BigDecimal;
 @ToString
 public class Operation {
     private String operator;
-    private String DateTime;
-    private OperationType operationType;
-    private BigDecimal value;
-    private Account account;
+    private Date DateTime;
+    private String operationType;
+    private String value;
+    private String accountID;
 }

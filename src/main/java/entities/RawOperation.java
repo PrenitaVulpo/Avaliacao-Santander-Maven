@@ -1,9 +1,7 @@
 package entities;
 
-import Enums.OperationType;
 import lombok.*;
 
-import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -15,7 +13,7 @@ public class RawOperation {
     private String DateTime;
     private String operationType;
     private String value;
-    private String ID;
+    private String AccountID;
     private String bankName;
     private String agencyNumber;
     private String accountNumber;

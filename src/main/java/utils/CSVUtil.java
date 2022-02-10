@@ -10,6 +10,7 @@ import java.util.*;
 public class CSVUtil {
     final String file = "src/operacoes.csv";
     List<Map<String,String>> lines = null;
+    final ArrangeUtils arrangeUtils = new ArrangeUtils();
 
     public CSVUtil(){
         try{
@@ -27,7 +28,7 @@ public class CSVUtil {
                 }
                 lines.add(entry);
             }
-            this.lines = lines;
+            this.lines = arrangeUtils.filterMapList(lines);
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -43,7 +44,7 @@ public class CSVUtil {
                 line.get("ID_DA_CONTA"),
                 line.get("NOME_DO_BANCO"),
                 line.get("NUMERO_DA_AGENCIA"),
-                line.get("ID_DA_CONTA")
+                line.get("NUMERO_DA_CONTA")
         )));
 
         return result;
